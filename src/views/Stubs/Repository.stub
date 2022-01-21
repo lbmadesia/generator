@@ -2,7 +2,7 @@
 
 namespace DummyNamespace;
 
-use DB;
+use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use DummyModelNamespace;
 use App\Exceptions\GeneralException;
