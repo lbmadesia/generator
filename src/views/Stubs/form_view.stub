@@ -5,7 +5,8 @@
         <div class="col-lg-8">
             {{-- {{ Form::text('name', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.blogs.title'), 'required' => 'required']) }} --}}
         </div>
-    <div class="col-lg-2"></div>
+        <div class="col-lg-2"></div>
+    </div>
     
 </div>
 
