@@ -11,11 +11,13 @@
         {{ Form::token() }}
         
         @include("backend.dummy_small_plural_model.form")
-        
-        {{ link_to_route('admin.dummy_small_plural_model.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
-        
-        {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md']) }}
-       
+        <div class="row ">
+            <div class="col-12 text-center">
+                {{ link_to_route('admin.dummy_small_plural_model.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger over-danger btn-md']) }}
+            
+                {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md']) }}
+            </div>
+       </div>
     {{ Form::close() }}
     
     </div>
