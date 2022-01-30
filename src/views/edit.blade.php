@@ -26,8 +26,13 @@
                 <div class="form-group">
                     @include("backend.modules.form")
                     <div class="edit-form-btn">
-                    {{ link_to_route('admin.modules.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
-                    {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-primary btn-md']) }}
+                        <div class="row ">
+                            <div class="col-12 text-center">
+
+                                {{ link_to_route('admin.modules.index', trans('generator::buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
+                                {{ Form::submit(trans('generator::buttons.general.crud.update'), ['class' => 'btn btn-primary btn-md']) }}
+                            </div>
+                        </div>
                     <div class="clearfix"></div>
                 </div>
             </div>

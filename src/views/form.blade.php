@@ -1,5 +1,6 @@
 <div class="box-body">
-    <div class="form-group">
+   <div class="row my-3">
+       <div class="col-lg-2"></div>
         <div class="col-lg-10 col-lg-offset-1">
             <div class="alert alert-warning">
                 Note : You need to have 0777 permission to all folders of the project.
@@ -7,8 +8,8 @@
         </div>
     </div>
     <!-- Module Name -->
-    <div class="form-group">
-        {{ Form::label('name', trans('generator::labels.modules.form.name'), ['class' => 'col-lg-2 control-label required']) }}
+   <div class="row my-3">
+        {{ Form::label('name', trans('generator::labels.modules.form.name'), ['class' => 'col-lg-2 control-label text-right required']) }}
 
         <div class="col-lg-10">
             {{ Form::text('name', null, ['class' => 'form-control box-size', 'placeholder' => 'e.g., Blog', 'required' => 'required']) }}
@@ -16,8 +17,8 @@
     </div>
 
     <!-- Directory -->
-    <div class="form-group">
-        {{ Form::label('directory_name', trans('generator::labels.modules.form.directory_name'), ['class' => 'col-lg-2 control-label required']) }}
+   <div class="row my-3">
+        {{ Form::label('directory_name', trans('generator::labels.modules.form.directory_name'), ['class' => 'col-lg-2 control-label text-right required']) }}
 
         <div class="col-lg-10">
             {{ Form::text('directory_name', null, ['class' => 'form-control box-size', 'placeholder' => 'e.g., Blog', 'required' => true]) }}
@@ -26,8 +27,8 @@
     <!-- End Directory -->
 
     <!-- Model Name -->
-    <div class="form-group">
-        {{ Form::label('model_name', trans('generator::labels.modules.form.model_name'), ['class' => 'col-lg-2 control-label required']) }}
+   <div class="row my-3">
+        {{ Form::label('model_name', trans('generator::labels.modules.form.model_name'), ['class' => 'col-lg-2 control-label text-right required']) }}
 
         <div class="col-lg-10">
             {{ Form::text('model_name', null, ['class' => 'form-control box-size only-text', 'placeholder' => 'e.g., Blog', 'required' => true]) }}
@@ -37,8 +38,8 @@
     <!-- End Model Name -->
 
     <!-- Table Name -->
-    <div class="form-group">
-        {{ Form::label('table_name', trans('generator::labels.modules.form.table_name'), ['class' => 'col-lg-2 control-label']) }}
+   <div class="row my-3">
+        {{ Form::label('table_name', trans('generator::labels.modules.form.table_name'), ['class' => 'col-lg-2 control-label text-right']) }}
 
         <div class="col-lg-10">
             {{ Form::text('table_name', null, ['class' => 'form-control box-size', 'placeholder' => 'e.g., Blog']) }}
@@ -48,8 +49,8 @@
     <!-- End Table Name -->
 
     <!-- Crud Operations Create/Edit/Delete to be added to the field (Read operation is given by default)-->
-    <div class="form-group">
-        {{ Form::label('operations', 'CRUD Operations', ['class' => 'col-lg-2 control-label']) }}
+   <div class="row my-3">
+        {{ Form::label('operations', 'CRUD Operations', ['class' => 'col-lg-2 control-label text-right']) }}
         <div class="col-lg-8">
             <label class="control control--checkbox">
                 <!-- For Create Operation of CRUD -->
@@ -69,15 +70,19 @@
         </div>
     </div>
     <!-- End Crud Operations -->
-    <div class="box-header text-center">
-        <hr width=60%/>
-        <h3 class="box-title"> Optional </h3>
-        <hr width=60%/>
+    <div class="row my-3">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 text-center">
+            <hr />
+            <h3 class="box-title"> Optional </h3>
+            <hr />
+        </div>
+        <div class="col-lg-2"></div>
     </div><!-- /.box-header -->
-    <!-- Events --> 
+    <!-- Events -->
     <div class="events-div">
-        <div class="form-group event clearfix">
-            {{ Form::label('event[]', trans('generator::labels.modules.form.event'), ['class' => 'col-lg-2 control-label']) }}
+        <div class="row my-3 event clearfix">
+            {{ Form::label('event[]', trans('generator::labels.modules.form.event'), ['class' => 'col-lg-2 control-label text-right']) }}
 
             <div class="col-lg-6">
                 {{ Form::text('event[]', null, ['class' => 'form-control box-size', 'placeholder' => trans('generator::labels.modules.form.event'), 'style' => 'width:100%']) }}
@@ -94,8 +99,8 @@
     <!-- To Show the generated File -->
     <div class="box-body">
         <!--All Files -->
-        <div class="form-group">
-            <label class="col-lg-2 control-label">Files To Be Generated</label>
+       <div class="row my-3">
+            <label class="col-lg-2 control-label text-right">Files To Be Generated</label>
             <div class="col-lg-10">
                 <textarea class="form-control box-size files" contenteditable="true" rows=15 readonly="">
                 </textarea>
@@ -106,7 +111,7 @@
     <!-- End The File Generated Textbox -->
 
     <!-- Override CheckBox -->
-    <div class="form-group">
+   <div class="row my-3">
         <div class="col-lg-2"></div>
         <div class="col-lg-10">
             <p><strong>Note : </strong> The Files would be overwritten, if already exists. Please look at files (and their respective paths) carefully before creating.</p>
