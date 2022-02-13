@@ -1,8 +1,7 @@
 @extends ('backend.layouts.app')
 
-@section ('title')
- Modules Management
-@endsection
+@section ('title', trans('generator::labels.modules.management'))
+
 
 @section('content')
  <div class="p-3">
