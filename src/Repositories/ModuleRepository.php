@@ -4,7 +4,8 @@ namespace Lbmadesia\Generator\Repositories;
 
 use Lbmadesia\Generator\Module;
 use App\Exceptions\GeneralException;
-use App\Repositories\BaseRepository;
+// use App\Repositories\BaseRepository;
+use Lbmadesia\Generator\BaseRepository;
 use App\Models\Permission\Permission;
 use Illuminate\Support\Str;
 
