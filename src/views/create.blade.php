@@ -1,8 +1,9 @@
 
 @extends ('backend.layouts.app')
 
-@section ('title', trans('generator::labels.modules.management') . ' | ' . trans('generator::labels.modules.create'))
-
+@section ('title')
+User Management
+@endsection
 
 @section('page-header')
 <div class="w-100 d-flex justify-content-between align-items-center pt-3 px-3" style="border-bottom:2px solid #ccc;">

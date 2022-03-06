@@ -23,7 +23,7 @@ class CrudGeneratorServiceProvider extends ServiceProvider
         ], 'generator');
         $this->publishes([
             __DIR__.'/../views' => base_path('resources/views/vendor/generator'),
-        ],'generator');
+        ]);
 
         // Load the Breadcrumbs for the package
         if (class_exists('Breadcrumbs')) {

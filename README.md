@@ -25,19 +25,13 @@ After installing the Generator, register the `Lbmadesia\Generator\Provider\CrudG
 
 If you need to change what the stubs are generating for you, you can always publish the package's views files by below command:
 ```
-php artisan vendor:publish --tag=generator
+php artisan vendor:publish --tag=generator_views
 ```
 
 and you can get the title "Module Management" from package's translation file by using:
 
 ```
 {{ trans('generator::menus.modules.management') }}
-```
-
-Link Api management with route 
-
-```
-{{ route('admin.modules.index') }}
 ```
 
 

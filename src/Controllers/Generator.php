@@ -216,7 +216,7 @@ class Generator
         $this->delete = !empty($input['model_delete']) ? true : false;
 
         $model_singular = strtolower(Str::singular($this->model));
-        
+
         //Permissions
         $this->edit_permission = 'edit-'.$model_singular;
         $this->store_permission = 'store-'.$model_singular;
@@ -226,7 +226,7 @@ class Generator
         $this->delete_permission = 'delete-'.$model_singular;
 
         $model_plural = strtolower(Str::plural($this->model));
-        
+
         //Routes
         $this->index_route = 'admin.'.$model_plural.'.index';
         $this->create_route = 'admin.'.$model_plural.'.create';
@@ -418,7 +418,7 @@ class Generator
     {
         $this->request_namespace .= $this->getFullNamespace('');
         $this->createDirectory($this->getBasePath($this->request_namespace));
-        
+
         //Generate Manage Request File
         $this->generateFile('Request', [
                 'DummyNamespace' => ucfirst($this->removeFileNameFromEndOfNamespace($this->manage_request_namespace)),
@@ -838,11 +838,11 @@ class Generator
             foreach ($this->events as $event) {
                 $path = escapeSlashes($base_path.DIRECTORY_SEPARATOR.$event);
                 $model = str_replace(DIRECTORY_SEPARATOR, '\\', $path);
-                
+
                 Artisan::call('make:event', [
                     'name' => $model,
                 ]);
-                
+
                 Artisan::call('make:listener', [
                     'name'    => $model.'Listener',
                     '--event' => $model,
@@ -887,7 +887,7 @@ class Generator
     {
         $path = resource_path('views'.DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'generator'.DIRECTORY_SEPARATOR.'Stubs'.DIRECTORY_SEPARATOR);
         $package_stubs_path = base_path('vendor'.DIRECTORY_SEPARATOR.'lbmadesia'.DIRECTORY_SEPARATOR.'generator'.DIRECTORY_SEPARATOR.'src'.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.'Stubs'.DIRECTORY_SEPARATOR);
-        if($this->files->exists($path)) 
+        if($this->files->exists($path))
             return $path;
         else
             return $package_stubs_path;

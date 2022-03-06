@@ -9,15 +9,11 @@
     {{ Form::model($dummy_small_model, ['route' => ['admin.dummy_small_plural_model.update', $dummy_small_model], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-dummy_small_model']) }}
 
                 @include("backend.dummy_small_plural_model.form")
-                <div class="row ">
-                    <div class="col-12 text-center">
-                        
-                        {{ link_to_route('admin.dummy_small_plural_model.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger over-danger btn-md']) }}
+
+                {{ link_to_route('admin.dummy_small_plural_model.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
                 
-                        {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-primary btn-md']) }}
-                   
-                   </div>
-                </div>
+                {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-primary btn-md']) }}
+       
     {{ Form::close() }}
     </div>
 </div>

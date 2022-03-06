@@ -1,6 +1,8 @@
 @extends ('backend.layouts.app')
 
-@section ('title', trans('generator::labels.modules.management'))
+@section ('title')
+ Modules Management
+@endsection
 
 
 @section('content')
@@ -57,7 +59,7 @@
                 order: [[0, "asc"]],
                 searchDelay: 500
          });
- 
+
 
 });
 </script>

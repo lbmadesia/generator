@@ -2,9 +2,9 @@
 
 return [
 	"modules" => [
-		"all" => "All Modules",
-		"create" => "Create Module",
+		"all" => "All Modules Page",
+		"create" => "Create Module Page",
 		"management" => "Module Management",
-		"main" => "Module",
+		"main" => "Module Pages",
 	]
 ];
